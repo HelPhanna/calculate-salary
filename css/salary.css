@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Blurred background image */
+body::before {
+  content: "";
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 110%;
+  height: 110%;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  filter: blur(5px); /* Adjust blur level here */
+  z-index: -1; /* Place it behind the main content */
+}
+h1 {
+  font-size: 45px;
+  font-family: Ubuntu;
+  font-style: bold;
+  margin-top: 0px;
+  color: green;
+  justify-content: center;
+  display: flex;
+  margin-top: -20px;
+}
+p {
+  font-size: 18px;
+  font-family: Ubuntu;
+  color: rgb(50, 50, 249);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.content {
+  background-color: white;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1; /* Keep content above the background */
+}
+.content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  font-size: 25px;
+  font-family: Ubuntu;
+  color: rgb(0, 0, 0);
+}
+input {
+  width: 100%;
+  color: rgb(47, 222, 20);
+  font-size: 25px;
+  font-family: Ubuntu;
+  margin: 20px 0px;
+  height: 50px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  outline: 0px;
+}
+input:focus {
+  border-color: green;
+}
+#calculate {
+  color: white;
+  padding: 10px;
+  background-color: rgb(13, 185, 13);
+  font-family: Ubuntu;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid gray;
+  width: 100%;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+#calculate:hover {
+  background-color: blue;
+  border-radius: 0px;
+  color: black;
+}
+
+#total {
+  color: blue;
+  font-family: ubuntu;
+  font-size: 25px;
+}
+#totalsalary {
+  font-weight: bold;
+}
